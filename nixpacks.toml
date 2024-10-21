@@ -1,12 +1,15 @@
+[variables]
+CI = 'true'
+#NIXPACKS_METADATA = 'node'
+NODE_ENV = 'production'
+#NPM_CONFIG_PRODUCTION = 'false'
+NIXPACKS_NODE_VERSION = '20'
+
 [phases.install]
-cmds = ['npm run install']
+cmds = ['npm ci']
 
 [phases.build]
 cmds = ['npm run build']
-
-[variables]
-NODE_ENV = 'production'
-NIXPACKS_NODE_VERSION = '20'
 
 [start]
 cmd = 'npm run start'
